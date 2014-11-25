@@ -1,0 +1,17 @@
+Person,Player ID,Target,A,Target,Giver,Round,Clue A,B,Target,Giver,Round,Clue B,C,Target,Giver,Round,Clue C,D,Target,Giver,Round,Clue D
+Description,,,,,,,"0 = Questions, 1 = Statements",,,,,"0 = No 'E's, 1 = Only 'E's",,,,,"0 = Bitch, 1 = Bright-eyed",,,,,"0 = Truth, 1 = Lies"
+,0,5,0,1,1,C,What a dick going after Statement sayers!,0,0,3,A,You're quite the hypocrite when it comes to vowel usage.,0,1,6,A,Why are you so intolerant of your opposite in Round C?,0,0,4,C,I'm so excited to watch you take down your kind next round!
+,1,13,1,1,2,C,It's really disgusting how you want to kill the unquestioning among us.,0,0,0,C,,0,1,10,D,,0,1,2,C,
+,2,10,0,0,8,B,That's right kill your own kind from last round.,1,1,13,C,,0,0,13,C,,0,1,6,B,
+,3,11,1,1,10,A,Why would you want to kill your own kind in this round?,1,1,8,C,,0,0,9,C,,0,1,13,B,
+,4,7,0,1,10,C,Ew you must be prejudiced against statement-makers.,0,1,6,B,,1,1,1,D,,0,0,3,B,
+,5,8,1,0,10,D,In Round A you didn't want to kill the questioners.,0,0,5,B,,1,0,14,D,,0,1,10,A,
+,6,0,0,0,14,A,,1,0,14,A,,1,0,12,C,,0,0,2,A,
+,7,12,1,0,12,B,,1,0,1,B,,1,1,13,D,,0,1,1,C,
+,8,4,0,0,5,C,,0,0,11,B,,0,1,14,A,,1,0,9,A,
+,9,3,1,1,1,B,,0,1,8,B,,0,0,14,A,,1,0,0,B,
+,10,1,0,1,9,A,,1,0,4,C,,0,0,6,D,,1,0,12,C,
+,11,2,1,0,14,B,,1,1,9,A,,0,0,7,C,,1,0,0,D,
+,12,9,0,1,1,D,,0,0,0,D,,1,0,3,D,,1,1,14,D,
+,13,14,1,0,7,B,,0,1,0,D,,1,1,11,B,,1,1,9,D,
+,14,6,0,0,12,C,,1,1,1,D,,1,1,4,D,,1,0,11,A,
