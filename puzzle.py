@@ -1,5 +1,10 @@
 import sys, random, math, string
 
+RULES = [('Only Es','No Es'),
+         ('Alliteration','Non-alliteration'),
+         ('Forward','Backward'),
+         ('Truth','Lies')]
+
 def bit(n, b):
     return n/(2**b)%2
 
@@ -43,33 +48,37 @@ if __name__ == "__main__":
     n = int(sys.argv[1])
     s = gen(n)
     players = [Player(i, s[i]) for i in range(n)]
+    attrs = int(math.ceil(math.log(n, 2)))
+
+    givers = zip(*[gen(n) for i in range(attrs)])
 
     out = open(sys.argv[2],'w')
 
     # header
-    attrs = int(math.ceil(math.log(n, 2)))
     out.write('Player,Target')
     for attr in range(attrs):
         attr_name = string.uppercase[attr]
         out.write(','
                   +attr_name+','
-                  +'Target,'
+                  +'Target Type,'
                   +'Giver,'
                   +'Round,'
                   +'Clue')
-    out.write('\n')
+    out.write(',Lies,Dessert\n')
 
     # players
     for p in players:
         out.write(str(p.id)+','+str(p.target))
         for i in range(attrs):
+            clue = '(%s),'
             out.write(','
                       +p.attr(i)+','
                       +p.target_attr(i)+','
-                      +str(random.choice(range(n)))+','
+                      +str(givers[p.id][i])+','
                       +random.choice(string.uppercase[:attrs])+','
-                      +' ')
-        out.write('\n')
+                      +clue)
+        # write second knights/knaves column, dessert
+        out.write(', , \n')
 
     out.close()
     
