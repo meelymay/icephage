@@ -14,11 +14,11 @@ class Player:
         self.target = target
 
     def attr(self, n):
-        return str(bit(self.id, n))
+        return bit(self.id, n)
 
     def target_attr(self, n):
         b = bin(self.target)
-        return str(bit(self.target, n))
+        return bit(self.target, n)
 
 def check(s):
     seen = set([])
@@ -38,19 +38,44 @@ def gen_arb(n):
         
     return ts
 
-def gen(n):
+def gen_ids(n):
     s = gen_arb(n)
     while not check(s):
         s = gen_arb(n)
     return s
 
+def gen_clues(players, rounds):
+    mult = 10000
+    clues = {}
+
+    available = set()
+    for player in players:
+        clues[player] = {}
+        for round in range(rounds):
+            available.add(player*mult+round)
+
+    for player in players:
+        for round in range(rounds):
+            p_r = random.sample(available, 1)[0]
+            receiver = players[p_r/mult]
+            about_round = p_r%mult
+            target = receiver.target_attr(about_round)
+            
+            who = receiver.id
+            rule = RULES[about_round][target]
+
+            clue = '%s: Your enemy %s.' % (who, rule)
+
+            clues[player][round] = clue
+    return clues
+
 if __name__ == "__main__":
     n = int(sys.argv[1])
-    s = gen(n)
-    players = [Player(i, s[i]) for i in range(n)]
+    s = gen_ids(n)
+    players = dict([(i, Player(i, s[i])) for i in range(n)])
     attrs = int(math.ceil(math.log(n, 2)))
 
-    givers = zip(*[gen(n) for i in range(attrs)])
+    clues = gen_clues(players, attrs)
 
     out = open(sys.argv[2],'w')
 
@@ -60,23 +85,16 @@ if __name__ == "__main__":
         attr_name = string.uppercase[attr]
         out.write(','
                   +attr_name+','
-                  +'Target Type,'
-                  +'Giver,'
-                  +'Round,'
                   +'Clue')
     out.write(',Lies,Dessert\n')
 
     # players
-    for p in players:
+    for p in players.values():
         out.write(str(p.id)+','+str(p.target))
         for i in range(attrs):
-            clue = '(%s),'
             out.write(','
-                      +p.attr(i)+','
-                      +p.target_attr(i)+','
-                      +str(givers[p.id][i])+','
-                      +random.choice(string.uppercase[:attrs])+','
-                      +clue)
+                      +str(p.attr(i))+','
+                      +clues[p.id][i])
         # write second knights/knaves column, dessert
         out.write(', , \n')
 
