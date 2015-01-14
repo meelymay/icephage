@@ -1,0 +1,19 @@
+	Player	Target	A	Target Type	Clue	B	Target Type	Clue	C	Target Type	Clue	D	Target Type	Clue
+Instructions:					English Accents			Names			Left			Lies
+Person					Non-English Accents			No names			Right			Truth
+Or	0	13	0	1	valley girl	0	0	swapping 4 vowel sounds	0	1	to the happy couple	0	1	08 is a liar.
+Sesh	1	5	1	1	Russian	0	0	name game	0	1	3 second forehead	0	0	10 and I are the same type
+Vihang	2	1	0	1	Cockney	1	0	position at the table	0	0	napkin on head	0	0	Neither 09 nor I lie.
+Natalie	3	15	1	1	Swedish	1	1	threatening pointing	0	1	stand up and turn in a circle	0	1	00 and 08 are the same type.
+Amelia	4	3	0	1	Australian	0	1	backwards	1	0	yes sir salute	0	0	05 is a different type from me.
+Mike	5	11	1	1	Spanish	0	1	ito, ita	1	0	clap like you're waiting for lights to go out	0	1	12 is a liar.
+Alex	6	10	0	0	Texas	1	1	dopple ganger	1	0	mimic the person who's drinking until they put their glass down	0	1	01 tells the truth. 07 does too.
+Alon	7	12	1	0	Libyan	1	0	Larry Flint	1	1	crawl under the table	0	1	12 would tell you that 00 and 01 are different types.
+Phil	8	14	0	0	Fargo	0	1	sneeze	0	1	all hail the sun god	1	1	00 and 01 are the same type.
+Adam	9	0	1	0	German	0	0	NATO alphabet	0	0	bark	1	0	02 is a liar.
+Eli	10	9	0	1	Queen's English	1	0	Superhero _____	0	0	karate chop	1	1	Exactly one of these is true: I tell the truth or 11 lies.
+Ilana	11	8	1	0	French	1	0	superlatives	0	0	do a dance	1	1	04 and 05 are the same type.
+Rachel	12	2	0	0	Irish	0	1	full name (2 middle)	1	0	fan yourself and complain about how hot it is	1	0	13 tells the truth.
+Dan	13	7	1	1	Italian	0	1	subtitles	1	1	sing the first few measures of the national anthem	1	0	Exactly one of 06, 08 and 15 is a liar.
+Divya	14	4	0	0	South African	1	0	#$%*burger	1	1	remember the alamo!	1	0	03 would tell you that 01 tells the truth.
+Piotr	15	6	1	0	Israeli	1	1	clothing	1	1	burst out laugh, start to cough	1	0	Exactly two of 02, 05, 09, 10, and 11 are liars.
